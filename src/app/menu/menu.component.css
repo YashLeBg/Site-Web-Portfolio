@@ -58,6 +58,12 @@
     font-size: 16px;
 }
 
+.logo {
+    padding-top: 8px;
+    height: 30px;
+    width: 30px;
+}
+
 .content {
     padding: 100px 20px;
     /* Padding to make room for the navbar */
