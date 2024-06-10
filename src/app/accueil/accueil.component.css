@@ -64,11 +64,15 @@ hr {
 .description {
   font-size: 20px;
   text-align: justify;
+  padding-left: 20px;
 }
 
 .description li {
   margin-bottom: 30px;
   line-height: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  list-style: none;
 }
 
 .contacts {
@@ -206,4 +210,7 @@ hr {
     height: 40px;
   }
   
+  .description {
+    padding-left: 0;
+  }
 }
