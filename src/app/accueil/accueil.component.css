@@ -65,6 +65,7 @@ hr {
   font-size: 20px;
   text-align: justify;
   padding-left: 20px;
+  padding: 50px 20px 20px;
 }
 
 .description li {
@@ -73,6 +74,12 @@ hr {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 10px;
   list-style: none;
+  background-color: rgba(237, 237, 237, 255);
+  border-radius: 5px;
+}
+
+.description li:last-child {
+  margin-bottom: 0;
 }
 
 .contacts {
@@ -100,7 +107,7 @@ hr {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  padding: 20px 0px 90px;
+  padding-top: 10px;
 }
 
 .button {
@@ -135,11 +142,12 @@ hr {
   width: auto;
   will-change: transform, opacity;
   z-index: 0;
+  text-decoration: none;
 }
 
 .button:hover {
   background: #F6F9FE;
-  color: #5A2C2B;
+  color: rgb(139, 139, 139);
 }
 
 .button:active {
@@ -166,6 +174,10 @@ hr {
 
 .button:disabled {
   box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+.download-cv {
+  display: flex;
+  justify-content: center;
 }
 
 @media screen and (max-width: 834px) {
@@ -209,8 +221,12 @@ hr {
     padding: 2px 12px;
     height: 40px;
   }
+
+  .boutons {
+    padding: 20px 0px 30px;
+  }
   
   .description {
-    padding-left: 0;
+    padding-top: 0;
   }
 }
