@@ -1,7 +1,3 @@
-body {
-  background-image: url("../../assets/background.png");
-}
-
 h3 {
   font-size: larger;
 }
@@ -25,19 +21,23 @@ hr {
 .info-gauche {
   align-items: center;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
 }
 
 .info-gauche-top {
-  background-color: rgba(237, 237, 237, 255);
+  background-color: #EAF4F4;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 30px;
   padding-left: 75px;
   padding-right: 75px;
+  border-radius: 20px 20px 0 0;
 }
 
 .info-gauche-bottom {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 10px;
   background-color: white;
+  border-radius: 0 0 10px 10px;
 }
 
 .info-droite {
@@ -63,9 +63,8 @@ hr {
 
 .description {
   font-size: 20px;
-  text-align: justify;
   padding-left: 20px;
-  padding: 50px 20px 20px;
+  padding: 40px 20px 22px;
 }
 
 .description li {
@@ -74,7 +73,7 @@ hr {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 10px;
   list-style: none;
-  background-color: rgba(237, 237, 237, 255);
+  background-color: #EAF4F4;
   border-radius: 5px;
 }
 
@@ -107,7 +106,7 @@ hr {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  padding-top: 10px;
+  padding-top: 15px;
 }
 
 .button {
@@ -146,8 +145,8 @@ hr {
 }
 
 .button:hover {
-  background: #F6F9FE;
-  color: rgb(139, 139, 139);
+  background: #EAF4F4;
+  color: #6B9080;
 }
 
 .button:active {
@@ -175,6 +174,7 @@ hr {
 .button:disabled {
   box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
 }
+
 .download-cv {
   display: flex;
   justify-content: center;
@@ -195,9 +195,16 @@ hr {
     width: 100%;
   }
 
+  .info-gauche-top {
+    border-radius: 10px 10px 0 0;
+  }
+
   .info-gauche-bottom {
-    justify-content: space-evenly;
-    align-items: center;
+    flex-direction: row;
+  }
+
+  .lien-button img {
+    width: 25px;
   }
 
   .info-droite {
@@ -210,11 +217,7 @@ hr {
   }
 
   .contacts {
-    flex-direction: column;
-  }
-
-  .lien-button img {
-    width: 20px;
+    flex-direction: row;
   }
 
   .button {
@@ -225,7 +228,7 @@ hr {
   .boutons {
     padding: 20px 0px 30px;
   }
-  
+
   .description {
     padding-top: 0;
   }

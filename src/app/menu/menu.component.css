@@ -36,7 +36,7 @@
 }
 
 .navbar ul li a:hover {
-    color: rgb(139, 139, 139);
+    color: #F6FFF8;
 }
 
 .menu-toggle {
@@ -56,12 +56,6 @@
 .navbar-text {
     color: #000;
     font-size: 16px;
-}
-
-.logo {
-    padding-top: 8px;
-    height: 30px;
-    width: 30px;
 }
 
 .content {
