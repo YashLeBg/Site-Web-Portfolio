@@ -1,13 +1,13 @@
 <div class="informations">
   <div class="titre"><h2>Me contacter</h2></div>
   <div class="contacts-container">
-    <form #emailForm="ngForm" (ngSubmit)="sendEmail(emailForm)">
+    <form (ngSubmit)="sendEmail($event)">
       <div class="form-group">
         <label for="senderEmail">Votre adresse e-mail</label>
         <input
           type="email"
-          id="senderEmail"
-          name="senderEmail"
+          id="user_email"
+          name="user_email"
           ngModel
           required
         />

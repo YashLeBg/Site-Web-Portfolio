@@ -1,31 +1,35 @@
 import { Component } from "@angular/core";
-import { EmailService } from "../services/email.service";
+import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
+
 
 @Component({
   selector: "app-contacts",
   templateUrl: "./contacts.component.html",
   styleUrls: ["./contacts.component.css"],
 })
+
 export class ContactsComponent {
   public allOk: boolean = true;
+  public user_email: string = '';
+  public subject: string = '';
+  public message: string = '';
 
-  constructor(private emailService: EmailService) {}
+  public sendEmail(e: Event) {
+    e.preventDefault();
 
-  sendEmail(form: any) {
-    if (form.valid) {
-      this.emailService.sendEmail(form.value).subscribe(
-        (response) => {
-          console.log("E-mail envoyé avec succès", response);
-          form.resetForm();
+    emailjs
+      .sendForm('service_sbjfsyl', 'template_wp6qilo', e.target as HTMLFormElement, {
+        publicKey: '70dkgdvS56jzbYSvp',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          console.log(this.user_email);
           this.allOk = true;
         },
         (error) => {
-          console.error("Erreur lors de l'envoi de l'e-mail", error);
-        }
+          console.log('FAILED...', (error as EmailJSResponseStatus).text);
+        },
       );
-    } else {
-      console.error("Le formulaire n'est pas valide");
-      this.allOk = false;
-    }
   }
 }
