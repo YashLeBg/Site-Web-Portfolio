@@ -1,0 +1,125 @@
+.informations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 96vh;
+    font-family: 'Fira Sans', sans-serif;
+    padding: 20px;
+    /* Ajouté pour le padding sur les petits écrans */
+}
+
+.contacts-container {
+    width: 600px;
+    max-height: 650px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 25px;
+    background: white;
+    box-shadow: 0px 10px 50px #6B9080;
+    z-index: 1;
+}
+
+.titre {
+    position: absolute;
+    top: 140px;
+    font-size: larger;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="email"],
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid #F3F3F3;
+    background: linear-gradient(147deg, #A4C3B2 0%, #6B9080 74%);
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(147deg, #85c1a0 0%, #569278 74%);
+}
+
+/* Media Queries */
+
+/* Petits appareils (téléphones en mode portrait) */
+@media (max-width: 480px) {
+    .contacts-container {
+        width: 90%;
+        /* Ajuste la largeur pour s'adapter aux petits écrans */
+        padding: 10px;
+        /* Réduit le padding pour plus d'espace */
+    }
+
+    .titre {
+        top: 100px;
+        /* Ajuste la position du titre */
+        font-size: medium;
+        /* Ajuste la taille de la police du titre */
+    }
+
+    input[type="email"],
+    input[type="text"],
+    textarea {
+        font-size: 14px;
+        /* Réduit la taille de la police pour s'adapter aux petits écrans */
+        padding: 8px;
+        /* Réduit le padding pour s'adapter aux petits écrans */
+    }
+
+    button[type="submit"] {
+        padding: 8px;
+        /* Réduit le padding pour s'adapter aux petits écrans */
+    }
+}
+
+/* Appareils moyens (tablettes en mode paysage) */
+@media (max-width: 768px) {
+    .contacts-container {
+        width: 80%;
+        /* Ajuste la largeur pour s'adapter aux écrans moyens */
+        padding: 15px;
+        /* Ajuste le padding pour plus d'espace */
+    }
+
+    .titre {
+        top: 120px;
+        /* Ajuste la position du titre */
+        font-size: large;
+        /* Ajuste la taille de la police du titre */
+    }
+
+    input[type="email"],
+    input[type="text"],
+    textarea {
+        font-size: 15px;
+        /* Ajuste la taille de la police pour s'adapter aux écrans moyens */
+        padding: 9px;
+        /* Ajuste le padding pour s'adapter aux écrans moyens */
+    }
+
+    button[type="submit"] {
+        padding: 9px;
+        /* Ajuste le padding pour s'adapter aux écrans moyens */
+    }
+}

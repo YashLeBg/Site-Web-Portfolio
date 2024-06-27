@@ -1,7 +1,16 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
 const bodyParser = require("body-parser");
+const admin = require("firebase-admin");
+const serviceAccount = require("./firebaseServiceAccount.json");
 const cors = require("cors");
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://mail-site-cv.firebaseio.com",
+});
+
+const db = admin.firestore();
 
 const app = express();
 const port = 3000;
@@ -11,8 +20,20 @@ app.use(bodyParser.json());
 app.use(cors()); // Permettre les requêtes CORS de votre frontend Angular
 
 // Route pour l'envoi des e-mails
-app.post("/send-email", (req, res) => {
-  const { senderEmail, subject, message } = req.body;
+app.post("/send-email", async (req, res) => {
+  const { name, email, message } = req.body;
+
+    // Stocker les données dans Firestore
+    try {
+        await db.collection('contacts').add({
+            name,
+            email,
+            message,
+            timestamp: admin.firestore.FieldValue.serverTimestamp()
+        });
+    } catch (error) {
+        return res.status(500).send({ error: 'Erreur lors de l\'enregistrement des données.' });
+    }
 
   const transporter = nodemailer.createTransport({
     service: "gmail",
@@ -23,31 +44,23 @@ app.post("/send-email", (req, res) => {
   });
 
   const mailOptions = {
-    from: "yash.mohamed976@gmail.com",
-    to: "yash.mohamed976@gmail.com",
-    subject: subject,
-    text: "From : " + senderEmail + "\n\n" + message,
-  };
+    from: 'votreEmail@gmail.com',
+    to: 'yash.mohamed976@gmail.com',
+    subject: `Nouveau message de ${name}`,
+    text: `Vous avez reçu un nouveau message de ${name} (${email}):\n\n${message}`
+};
 
-  transporter.sendMail(mailOptions, (error, info) => {
+transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
-      console.error("Erreur lors de l'envoi de l'e-mail:", error); // Log d'erreur détaillé
-      res.status(500).json({
-        success: false,
-        message: "Erreur lors de l'envoi de l'e-mail",
-        error: error.message,
-      });
+        console.log(error);
+        res.status(500).send({ error: 'Erreur lors de l\'envoi de l\'e-mail.' });
     } else {
-      console.log("Email envoyé: " + info.response);
-      res.status(200).json({
-        success: true,
-        message: "E-mail envoyé avec succès",
-        response: info.response,
-      });
+        console.log('E-mail envoyé: ' + info.response);
+        res.status(200).send({ message: 'E-mail envoyé avec succès et données enregistrées.' });
     }
-  });
+});
 });
 
 app.listen(port, () => {
-  console.log(`Serveur backend démarré sur le port ${port}`);
+console.log(`Serveur backend démarré sur le port ${port}`);
 });

@@ -1,1 +1,33 @@
-<p>contacts works!</p>
+<div class="informations">
+  <div class="titre"><h2>Me contacter</h2></div>
+  <div class="contacts-container">
+    <form #emailForm="ngForm" (ngSubmit)="sendEmail(emailForm)">
+      <div class="form-group">
+        <label for="senderEmail">Votre adresse e-mail</label>
+        <input
+          type="email"
+          id="senderEmail"
+          name="senderEmail"
+          ngModel
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Objet</label>
+        <input type="text" id="subject" name="subject" ngModel required />
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" ngModel required></textarea>
+      </div>
+
+      <button type="submit">Envoyer</button>
+
+      <div *ngIf="!allOk" class="failed">
+        <p>Veuillez remplir tous les champs</p>
+      </div>
+    </form>
+  </div>
+</div>
