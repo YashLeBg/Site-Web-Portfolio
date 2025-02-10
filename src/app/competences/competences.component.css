@@ -1,0 +1,14 @@
+.cards-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 96vh; 
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px; 
+  font-family: "Fira Sans", sans-serif;
+  padding: 20px;
+}

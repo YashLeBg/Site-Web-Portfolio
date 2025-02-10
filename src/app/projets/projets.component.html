@@ -30,9 +30,22 @@
           <b style="color: #2196f3">CSS3</b>.
         </div>
         <div class="bottom">
-          <a class="btn" href="https://github.com/YashLeBg" target="_blank"
-            >Code source</a
-          >
+          <div class="btn-bottom">
+            <a
+              class="button"
+              href="https://github.com/YashLeBg/SiteWebMusic"
+              target="_blank"
+              >Code source</a
+            >
+            <button class="button" (click)="openModal1()">Compétences</button>
+
+            <app-modal-competences
+              *ngIf="isModal1Open"
+              [boutons]="boutonsModal1"
+              (close)="closeModal1()"
+            ></app-modal-competences>
+          </div>
+
           <div class="logos">
             <img class="logo" src="../../assets/logos/react.png" />
             <img class="logo" src="../../assets/logos/html-5.png" />
@@ -56,9 +69,22 @@
           <b style="color: #2196f3">CSS3</b>.
         </div>
         <div class="bottom">
-          <a class="btn" href="https://github.com/YashLeBg" target="_blank"
-            >Code source</a
-          >
+          <div class="btn-bottom">
+            <a
+              class="button"
+              href="https://github.com/YashLeBg/"
+              target="_blank"
+              >Code source</a
+            >
+            <button class="button" (click)="openModal1()">Compétences</button>
+
+            <app-modal-competences
+              *ngIf="isModal1Open"
+              [boutons]="boutonsModal1"
+              (close)="closeModal1()"
+            ></app-modal-competences>
+          </div>
+
           <div class="logos">
             <img class="logo" src="../../assets/logos/angular.png" />
             <img class="logo" src="../../assets/logos/html-5.png" />

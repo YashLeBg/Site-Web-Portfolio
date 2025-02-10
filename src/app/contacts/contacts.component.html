@@ -1,33 +1,26 @@
 <div class="informations">
-  <div class="titre"><h2>Me contacter</h2></div>
-  <div class="contacts-container">
-    <form (ngSubmit)="sendEmail($event)">
-      <div class="form-group">
-        <label for="senderEmail">Votre adresse e-mail</label>
-        <input
-          type="email"
-          id="user_email"
-          name="user_email"
-          ngModel
-          required
+  <div class="contacts">
+    <div class="button-container">
+      <div class="contact-item">
+        <img
+          class="lien-button"
+          src="assets/gmail.png"
+          alt="Gmail Logo"
+          style="height: 50px"
         />
+        <button (click)="copyEmailAndOpen()">
+          {{ copiedEmail ? "Email copié !" : email }}
+        </button>
       </div>
 
-      <div class="form-group">
-        <label for="subject">Objet</label>
-        <input type="text" id="subject" name="subject" ngModel required />
-      </div>
+      <hr />
 
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" ngModel required></textarea>
+      <div class="contact-item">
+        <img src="assets/phone.png" alt="Phone Logo" style="height: 50px" />
+        <button (click)="copyPhoneNumber()">
+          {{ copiedPhone ? "Numéro copié !" : phoneNumber }}
+        </button>
       </div>
-
-      <button type="submit">Envoyer</button>
-
-      <div *ngIf="!allOk" class="failed">
-        <p>Veuillez remplir tous les champs</p>
-      </div>
-    </form>
+    </div>
   </div>
 </div>

@@ -1,0 +1,15 @@
+<div class="modal-backdrop" (click)="closeModal()"></div>
+<div class="modal-content">
+  <button class="close-button" (click)="closeModal()">X</button>
+  <div class="buttons-container">
+    <a href="/competences"
+      ><button
+        *ngFor="let bouton of boutons"
+        [style.color]="bouton.couleurTexte"
+        class="rounded-button"
+      >
+        {{ bouton.label }}
+      </button></a
+    >
+  </div>
+</div>
