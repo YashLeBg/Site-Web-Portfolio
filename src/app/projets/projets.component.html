@@ -1,26 +1,26 @@
 <div class="informations">
   <div class="titre"><h2>Mes projets !</h2></div>
   <div class="blog-card">
-    <input type="radio" name="select" id="tap-1" checked />
-    <input type="radio" name="select" id="tap-2" />
-    <input type="radio" name="select" id="tap-3" />
-    <input type="radio" name="select" id="tap-4" />
+    <input type="radio" name="select" id="tap-6" checked />
     <input type="radio" name="select" id="tap-5" />
-    <input type="radio" name="select" id="tap-6" />
+    <input type="radio" name="select" id="tap-4" />
+    <input type="radio" name="select" id="tap-3" />
+    <input type="radio" name="select" id="tap-2" />
+    <input type="radio" name="select" id="tap-1" />
     <input type="checkbox" id="imgTap" />
     <div class="sliders">
-      <label for="tap-1" class="tap tap-1"></label>
-      <label for="tap-2" class="tap tap-2"></label>
-      <label for="tap-3" class="tap tap-3"></label>
-      <label for="tap-4" class="tap tap-4"></label>
-      <label for="tap-5" class="tap tap-5"></label>
       <label for="tap-6" class="tap tap-6"></label>
+      <label for="tap-5" class="tap tap-5"></label>
+      <label for="tap-4" class="tap tap-4"></label>
+      <label for="tap-3" class="tap tap-3"></label>
+      <label for="tap-2" class="tap tap-2"></label>
+      <label for="tap-1" class="tap tap-1"></label>
     </div>
     <div class="inner-part">
       <label for="imgTap" class="img">
-        <img class="img-1" src="../../assets/projets/SiteAMI.png" />
+        <img class="img-6" src="../../assets/projets/SiteAMI.png" />
       </label>
-      <div class="content content-1">
+      <div class="content content-6">
         <span>2024 (2 mois) | 1 personne</span>
         <div class="title">Site discographie de "AM I?"</div>
         <div class="text">
@@ -37,12 +37,10 @@
               target="_blank"
               >Code source</a
             >
-            <button class="button" (click)="openModal1()">Compétences</button>
 
             <app-modal-competences
               *ngIf="isModal1Open"
               [boutons]="boutonsModal1"
-              (close)="closeModal1()"
             ></app-modal-competences>
           </div>
 
@@ -57,9 +55,9 @@
     <hr />
     <div class="inner-part">
       <label for="imgTap" class="img">
-        <img class="img-2" src="../../assets/projets/FitnessYash.png" />
+        <img class="img-5" src="../../assets/projets/FitnessYash.png" />
       </label>
-      <div class="content content-2">
+      <div class="content content-5">
         <span>2024 (1 semaine) | 1 personne</span>
         <div class="title">Site de routines fitness</div>
         <div class="text">
@@ -76,12 +74,9 @@
               target="_blank"
               >Code source</a
             >
-            <button class="button" (click)="openModal1()">Compétences</button>
-
             <app-modal-competences
-              *ngIf="isModal1Open"
-              [boutons]="boutonsModal1"
-              (close)="closeModal1()"
+              *ngIf="isModal2Open"
+              [boutons]="boutonsModal2"
             ></app-modal-competences>
           </div>
 
@@ -96,9 +91,9 @@
     <hr />
     <div class="inner-part">
       <label for="imgTap" class="img">
-        <img class="img-3" src="../../assets/projets/Malyart.png" />
+        <img class="img-4" src="../../assets/projets/Malyart.png" />
       </label>
-      <div class="content content-3">
+      <div class="content content-4">
         <span>2023 (3 mois) | 4 personnes</span>
         <div class="title">Malyart - Site e-commerce</div>
         <div class="text">
@@ -109,13 +104,18 @@
           <b style="color: #f89c0e">phpMyAdmin</b>.
         </div>
         <div class="bottom">
-          <div>
+          <div class="btn-bottom">
             <a
-              class="btn"
-              href="http://193.54.227.208/~saephp05/"
+              class="button"
+              href="https://github.com/YashLeBg/malyart-ecommerce"
               target="_blank"
-              >Lien</a
+              >Code source</a
             >
+
+            <app-modal-competences
+              *ngIf="isModal1Open"
+              [boutons]="boutonsModal1"
+            ></app-modal-competences>
           </div>
           <div class="logos">
             <img class="logo" src="../../assets/logos/php.png" />
@@ -129,9 +129,9 @@
     <hr />
     <div class="inner-part">
       <label for="imgTap" class="img">
-        <img class="img-4" src="../../assets/projets/Memory.png" />
+        <img class="img-3" src="../../assets/projets/Memory.png" />
       </label>
-      <div class="content content-4">
+      <div class="content content-3">
         <span>2023 (1 semaine) | 1 personne</span>
         <div class="title">Memorize - Memory</div>
         <div class="text">
@@ -140,10 +140,18 @@
           <b style="color: #5291c3">JavaFX</b>.
         </div>
         <div class="bottom">
-          <div>
-            <a class="btn" href="https://github.com/YashLeBg" target="_blank"
+          <div class="btn-bottom">
+            <a
+              class="button"
+              href="https://github.com/YashLeBg/"
+              target="_blank"
               >Code source</a
             >
+
+            <app-modal-competences
+              *ngIf="isModal1Open"
+              [boutons]="boutonsModal1"
+            ></app-modal-competences>
           </div>
           <div class="logos">
             <img class="logo" src="../../assets/logos/java.png" />
@@ -155,9 +163,9 @@
     <hr />
     <div class="inner-part">
       <label for="imgTap" class="img">
-        <img class="img-5" src="../../assets/projets/bank.png" />
+        <img class="img-2" src="../../assets/projets/bank.png" />
       </label>
-      <div class="content content-5">
+      <div class="content content-2">
         <span>2023 (1 mois) | 3 personnes</span>
         <div class="title">Application gestion bancaire</div>
         <div class="text">
@@ -167,10 +175,18 @@
           <b style="color: #1296b9">MySQL</b>.
         </div>
         <div class="bottom">
-          <div>
-            <a class="btn" href="https://github.com/YashLeBg" target="_blank"
+          <div class="btn-bottom">
+            <a
+              class="button"
+              href="https://github.com/YashLeBg/malyart-ecommerce"
+              target="_blank"
               >Code source</a
             >
+
+            <app-modal-competences
+              *ngIf="isModal1Open"
+              [boutons]="boutonsModal1"
+            ></app-modal-competences>
           </div>
           <div class="logos">
             <img class="logo" src="../../assets/logos/java.png" />
@@ -183,9 +199,9 @@
     <hr />
     <div class="inner-part">
       <label for="imgTap" class="img">
-        <img class="img-6" src="../../assets/projets/SitePortfolio.png" />
+        <img class="img-1" src="../../assets/projets/SitePortfolio.png" />
       </label>
-      <div class="content content-6">
+      <div class="content content-1">
         <span>En cours... | 1 personne</span>
         <div class="title">Site web portfolio</div>
         <div class="text">
@@ -195,10 +211,18 @@
           <b style="color: #2196f3">CSS3</b>.
         </div>
         <div class="bottom">
-          <div>
-            <a class="btn" href="https://github.com/YashLeBg" target="_blank"
+          <div class="btn-bottom">
+            <a
+              class="button"
+              href="https://github.com/YashLeBg/malyart-ecommerce"
+              target="_blank"
               >Code source</a
             >
+
+            <app-modal-competences
+              *ngIf="isModal1Open"
+              [boutons]="boutonsModal1"
+            ></app-modal-competences>
           </div>
           <div class="logos">
             <img class="logo" src="../../assets/logos/angular.png" />

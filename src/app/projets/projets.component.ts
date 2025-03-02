@@ -6,34 +6,33 @@ import { Component } from "@angular/core";
   styleUrls: ["./projets.component.css"],
 })
 export class ProjetsComponent {
-  isModal1Open = false;
-  isModal2Open = false;
+  isModal1Open = true;
+  isModal2Open = true;
+  isModal3Open = true;
 
   boutonsModal1 = [
-    { label: "Compétence A", couleurTexte: "#FF5733" },
-    { label: "Compétence B", couleurTexte: "#4CAF50" },
-    { label: "Compétence B", couleurTexte: "#4CAF50" },
+    { label: "Réaliser", couleurTexte: "#FF5733" },
+    { label: "Optimiser", couleurTexte: "#4CAF50" },
+    { label: "Optimiser", couleurTexte: "#4CAF50" },
+    { label: "Optimiser", couleurTexte: "#4CAF50" },
+    { label: "Optimiser", couleurTexte: "#4CAF50" },
   ];
 
   boutonsModal2 = [
     { label: "Compétence X", couleurTexte: "#2196F3" },
     { label: "Compétence Y", couleurTexte: "#FFC107" },
     { label: "Compétence Z", couleurTexte: "#E91E63" },
+    { label: "Compétence Z", couleurTexte: "#E91E63" },
+    { label: "Compétence Z", couleurTexte: "#E91E63" },
+    { label: "Compétence Z", couleurTexte: "#E91E63" },
+    { label: "Compétence Z", couleurTexte: "#E91E63" },
+    { label: "Compétence Z", couleurTexte: "#E91E63" },
   ];
 
-  openModal1() {
-    this.isModal1Open = true;
-  }
+  boutonsModal3 = [
+    { label: "Technologie X", couleurTexte: "#2196F3" },
+    { label: "Technologie Y", couleurTexte: "#FFC107" },
+    { label: "Technologie Z", couleurTexte: "#E91E63" },
+  ];
 
-  closeModal1() {
-    this.isModal1Open = false;
-  }
-
-  openModal2() {
-    this.isModal2Open = true;
-  }
-
-  closeModal2() {
-    this.isModal2Open = false;
-  }
 }
