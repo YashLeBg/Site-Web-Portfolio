@@ -1,7 +1,8 @@
 <div class="informations">
   <div class="titre"><h2>Mes projets !</h2></div>
   <div class="blog-card">
-    <input type="radio" name="select" id="tap-6" checked />
+    <input type="radio" name="select" id="tap-7" checked />
+    <input type="radio" name="select" id="tap-6" />
     <input type="radio" name="select" id="tap-5" />
     <input type="radio" name="select" id="tap-4" />
     <input type="radio" name="select" id="tap-3" />
@@ -9,6 +10,7 @@
     <input type="radio" name="select" id="tap-1" />
     <input type="checkbox" id="imgTap" />
     <div class="sliders">
+      <label for="tap-7" class="tap tap-7"></label>
       <label for="tap-6" class="tap tap-6"></label>
       <label for="tap-5" class="tap tap-5"></label>
       <label for="tap-4" class="tap tap-4"></label>
@@ -16,6 +18,44 @@
       <label for="tap-2" class="tap tap-2"></label>
       <label for="tap-1" class="tap tap-1"></label>
     </div>
+    <div class="inner-part">
+      <label for="imgTap" class="img">
+        <img class="img-7" src="../../assets/projets/Bricoleuses.png" />
+      </label>
+      <div class="content content-7">
+        <span>2024 (3 mois) | 5 personnes</span>
+        <div class="title">
+          Plateforme d'inscription à des activités pour enfants
+        </div>
+        <div class="text">
+          Conception et développement d'un site web pour la compagnie les
+          bricoleuses en
+          <b style="color: #27aa78">Django</b>,
+          <b style="color: #36485e">VueJS</b>,
+          <b style="color: #fc490b">HTML5</b> et
+          <b style="color: #2196f3">CSS3</b>.
+        </div>
+        <div class="bottom">
+          <div class="btn-bottom">
+            <a class="button" href="https://lesbricoleuses.org/" target="_blank"
+              >Lien</a
+            >
+
+            <app-modal-competences
+              *ngIf="isModal7Open"
+              [boutons]="boutonsModal7"
+            ></app-modal-competences>
+          </div>
+          <div class="logos">
+            <img class="logo" src="../../assets/logos/django.png" />
+            <img class="logo" src="../../assets/logos/vuejs.png" />
+            <img class="logo" src="../../assets/logos/html-5.png" />
+            <img class="logo" src="../../assets/logos/css-3.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
     <div class="inner-part">
       <label for="imgTap" class="img">
         <img class="img-6" src="../../assets/projets/SiteAMI.png" />
@@ -39,8 +79,8 @@
             >
 
             <app-modal-competences
-              *ngIf="isModal1Open"
-              [boutons]="boutonsModal1"
+              *ngIf="isModal6Open"
+              [boutons]="boutonsModal6"
             ></app-modal-competences>
           </div>
 
@@ -75,8 +115,8 @@
               >Code source</a
             >
             <app-modal-competences
-              *ngIf="isModal2Open"
-              [boutons]="boutonsModal2"
+              *ngIf="isModal5Open"
+              [boutons]="boutonsModal5"
             ></app-modal-competences>
           </div>
 
@@ -113,8 +153,8 @@
             >
 
             <app-modal-competences
-              *ngIf="isModal1Open"
-              [boutons]="boutonsModal1"
+              *ngIf="isModal4Open"
+              [boutons]="boutonsModal4"
             ></app-modal-competences>
           </div>
           <div class="logos">
@@ -149,8 +189,8 @@
             >
 
             <app-modal-competences
-              *ngIf="isModal1Open"
-              [boutons]="boutonsModal1"
+              *ngIf="isModal3Open"
+              [boutons]="boutonsModal3"
             ></app-modal-competences>
           </div>
           <div class="logos">
@@ -184,8 +224,8 @@
             >
 
             <app-modal-competences
-              *ngIf="isModal1Open"
-              [boutons]="boutonsModal1"
+              *ngIf="isModal2Open"
+              [boutons]="boutonsModal2"
             ></app-modal-competences>
           </div>
           <div class="logos">
